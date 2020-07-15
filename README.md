@@ -1,96 +1,44 @@
-# gatsby-starter-business
-A [Gatsby v2](https://www.gatsbyjs.org/) and [Netlify CMS](https://www.netlifycms.org) powered generic business website.
+# Gridsome Portfolio Starter
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+A simple portfolio starter theme for Gridsome
 
-## Demo
-[Gatsby Starter Business](https://gatsby-starter-business.netlify.com)
+![screenshot](https://user-images.githubusercontent.com/4316355/55691365-a2403380-596b-11e9-93be-05b846ec7760.jpg)
+
+## Demo URL
+
+[https://gridsome-portfolio-starter.netlify.com](https://gridsome-portfolio-starter.netlify.com)
 
 ## Features
-* Complete Business Website Suite - Home Page, About Page, Pricing Page, Contact Page and Blog
-* Netlify CMS for Content Management
-* SEO Friendly (Sitemap, Schemas, Meta Tags, GTM etc)
-* Bulma and Sass Support for styling
-* Progressive Web App & Offline Support
-* Tags and RSS Feed for Blog
-* Disqus and Share Support
-* Elastic-Lunr Search (NEW)
-* Pagination (NEW)
-* Contact Form (Netlify Forms)
-* Easy Configuration using `config.js` file
 
-## Prerequisite
-* Node
-* Gatsby CLI (globally installed)
+- Clean and minimal design
+- [Tailwind CSS v1](https://tailwindcss.com) (with PurgeCSS). Using [this gridsome plugin](https://gridsome.org/plugins/gridsome-plugin-tailwindcss) as it combines Tailwind and PurgeCSS.
+- Scroll to sections using [vue-scrollto](https://github.com/rigor789/vue-scrollto)
+- Blog with markdown content for posts
+- Documentation type that shows how to use Vue components in Markdown (click Docs)
+- Theme Switcher with Dark Mode
+- Search posts with [Fuse.js](https://fusejs.io) and [vue-fuse](https://github.com/shayneo/vue-fuse)
+- Tags for posts
+- Basic pagination
+- Syntax highlighting with [Shiki](https://shiki.matsu.io) (using [this gridsome plugin](https://gridsome.org/plugins/gridsome-plugin-remark-shiki))
+- 404 Page
+- RSS Feed
+- Sitemap in XML
 
-## Getting Started
-Create your own project with Gatsby CLI:
-```shell
-gatsby new yourbusinessname https://github.com/v4iv/gatsby-starter-business.git 
-```
+## Installation
 
-## Available Scripts
+1. Install Gridsome CLI tool if you don't have it: `npm install --global @gridsome/cli`
+1. Clone the repo: `git clone https://github.com/drehimself/gridsome-portfolio-starter.git`
+1. `cd gridsome-portfolio-starter`
+1. `npm install`
+1. `gridsome develop` to start a local dev server at `http://localhost:8080`
 
-### Develop
-Start a hot-reloading development environment accessible at `localhost:8000`
-```shell
-yarn start
-```
+## Notes
 
-### Build
-Get an optimized production build for your site generating static HTML and per-route JavaScript code bundles.
-```shell
-yarn build
-```
-
-### Serve
-gatsby serve — Gatsby starts a local HTML server for testing your built site.
-```shell
-yarn serve
-```
-
-### Lint
-Lint the code according to eslintrc file, for consistency.
-```shell
-yarn lint
-```
-
-### Clean
-Remove the .cache and public for a scratch compile.
-```shell
-yarn clean
-```
-
-## Configuration
-To personalize and configure this Starter open `config.js` file and replace the default values.
-
-```javascript
-module.exports = {
-  siteTitle: 'Gatsby Starter Business', // Site title.
-  siteTitleAlt: 'Business', // Alternative site title for SEO.
-  siteLogo: '/icons/icon-512x512.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://gatsby-starter-business.netlify.com', // Domain of your website without pathPrefix.
-  // Do not use trailing slash!
-  pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
-  siteDescription: 'Leverage Gatsby Business Starter for your Business.', // Website description used for RSS feeds/meta description tag.
-  siteRss: '/rss.xml',
-  siteFBAppID: '', // FB Application ID for using app insights
-  googleTagManagerID: '', // GTM tracking ID.
-  disqusShortname: 'gatsby-business-starter', // Disqus shortname.
-  userName: 'Vaibhav Sharma',
-  userTwitter: 'vaibhaved',
-  userLocation: 'Delhi NCR, India',
-  userDescription: '',
-  copyright: 'Copyright © Gatsby Starter Business 2018. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#00d1b2', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#ffffff', // Used for setting manifest background color.
-}
-
-```
-
-## Deployment
-Clicking the button will ask for authentication via Github, which will create a repo in your github account with this starter. Then, it will build and deploy the site to Netlify.
-
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/v4iv/gatsby-starter-business&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
-
-You can read up on how to set up Identity(Authentication for CMS User) here [How To Set Up Netlify CMS](https://www.netlifycms.org/docs/add-to-your-site/)
+ - Based on my [personal portfolio website](https://andremadarang.com). I wanted to create an open source version with more features.
+ - Check out a [screencast I did](https://www.youtube.com/watch?v=uHo6o1TNQeE) where I go through the process of building my website.
+ - Illustrations from [unDraw](https://undraw.co)
+ - Search is based on [Fuse.js](https://fusejs.io) and [vue-fuse](https://github.com/shayneo/vue-fuse). It only searches the title and summary of posts for now. Some tweaking may be necessary to get it to search to your liking. Check out the fuse documentation for search settings. [This PR](https://github.com/drehimself/gridsome-portfolio-starter/pull/104) added the ability to search both "Post" and "Documentation" types.
+ - Check out these other Gridsome Starters where I got some ideas from:
+    - [Gridsome Starter Blog](https://github.com/gridsome/gridsome-starter-blog)
+    - [Gridsome Starter Bleda](https://github.com/cossssmin/gridsome-starter-bleda)
+    - [Jigsaw Starter Blog](https://jigsaw.tighten.co/docs/starter-templates/) - I got a lot of design inspiration from this starter theme.
