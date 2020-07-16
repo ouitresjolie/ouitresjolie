@@ -2,7 +2,7 @@
   "name": "andremadarang",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "CI= npm run build",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
